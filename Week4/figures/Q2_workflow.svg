@@ -1,0 +1,209 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1600" viewBox="0 0 1800 1600">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowDashed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #ffffff; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #e0f2fe; }
+      .boxTitle { font: 700 19px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 15px Arial, sans-serif; fill: #334155; }
+      .small { font: 14px Arial, sans-serif; fill: #475569; }
+      .decisionText { font: 700 18px Arial, sans-serif; fill: #713f12; }
+      .edgeLabel { font: 700 15px Arial, sans-serif; fill: #334155; }
+      .legend { font: 15px Arial, sans-serif; fill: #334155; }
+      .headerBox { fill: #1f4e79; stroke: #12395b; stroke-width: 3; }
+      .inputBox { fill: #e2e8f0; stroke: #475569; stroke-width: 2.5; }
+      .qcBox { fill: #dbeafe; stroke: #2563eb; stroke-width: 2.5; }
+      .referenceBox { fill: #ffedd5; stroke: #ea580c; stroke-width: 2.5; }
+      .processingBox { fill: #fef3c7; stroke: #d97706; stroke-width: 2.5; }
+      .callBox { fill: #f3e8ff; stroke: #7e22ce; stroke-width: 2.5; }
+      .annotationBox { fill: #e0e7ff; stroke: #4f46e5; stroke-width: 2.5; }
+      .decision { fill: #fef9c3; stroke: #ca8a04; stroke-width: 2.5; }
+      .branchBox { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .resultBox { fill: #dcfce7; stroke: #16a34a; stroke-width: 2.5; }
+      .recordBox { fill: #ffffff; stroke: #94a3b8; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1800" height="1600" fill="#ffffff"/>
+
+  <rect class="headerBox" x="80" y="25" width="1640" height="85" rx="10"/>
+  <text class="title" x="900" y="63" text-anchor="middle">Q2 final workflow: from paired-end FASTQ to interpretable variants</text>
+  <text class="subtitle" x="900" y="91" text-anchor="middle">Verified WGS path with shared QC, reference, alignment, and mapped-read processing</text>
+
+  <rect class="inputBox" x="40" y="145" width="260" height="105" rx="10"/>
+  <text class="boxTitle" x="170" y="180" text-anchor="middle">Paired-end FASTQ</text>
+  <text class="body" x="170" y="208" text-anchor="middle">S01 synthetic WGS demo</text>
+  <text class="small" x="170" y="231" text-anchor="middle">Check R1/R2 pairing and sample identity</text>
+
+  <line x1="300" y1="197" x2="350" y2="197" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="qcBox" x="355" y="145" width="270" height="105" rx="10"/>
+  <text class="boxTitle" x="490" y="180" text-anchor="middle">FastQC + MultiQC</text>
+  <text class="body" x="490" y="208" text-anchor="middle">Inspect quality, GC, adapters,</text>
+  <text class="body" x="490" y="231" text-anchor="middle">duplication, and overrepresented reads</text>
+
+  <line x1="625" y1="197" x2="675" y2="197" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <polygon class="decision" points="800,132 950,197 800,262 650,197"/>
+  <text class="decisionText" x="800" y="186" text-anchor="middle">Are adapter or quality</text>
+  <text class="decisionText" x="800" y="212" text-anchor="middle">problems present?</text>
+
+  <path d="M800,262 L800,300 L670,300" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="edgeLabel" x="792" y="286" text-anchor="end">Yes</text>
+  <path d="M950,197 L1160,197" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="edgeLabel" x="1050" y="181" text-anchor="middle">No</text>
+
+  <rect class="qcBox" x="410" y="300" width="260" height="115" rx="10"/>
+  <text class="boxTitle" x="540" y="333" text-anchor="middle">fastp trimming</text>
+  <text class="body" x="540" y="360" text-anchor="middle">Enable PE adapter detection</text>
+  <text class="body" x="540" y="382" text-anchor="middle">or supply adapter sequences</text>
+  <text class="small" x="540" y="404" text-anchor="middle">Use moderate 3' quality trimming</text>
+
+  <line x1="670" y1="357" x2="735" y2="357" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="qcBox" x="740" y="300" width="280" height="115" rx="10"/>
+  <text class="boxTitle" x="880" y="333" text-anchor="middle">FastQC + MultiQC again</text>
+  <text class="body" x="880" y="360" text-anchor="middle">Compare read count, length, GC,</text>
+  <text class="body" x="880" y="382" text-anchor="middle">adapter, and duplicate metrics</text>
+  <text class="small" x="880" y="404" text-anchor="middle">Do not assume trimming improved the data</text>
+
+  <path d="M1020,357 L1090,357 L1090,197 L1160,197" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="referenceBox" x="1165" y="135" width="330" height="125" rx="10"/>
+  <text class="boxTitle" x="1330" y="168" text-anchor="middle">Reference and annotation</text>
+  <text class="body" x="1330" y="196" text-anchor="middle">GRCh38.p14, primary contigs</text>
+  <text class="body" x="1330" y="219" text-anchor="middle">Ensembl/VEP release 116</text>
+  <text class="small" x="1330" y="243" text-anchor="middle">Record accession, contig names, and checksum</text>
+
+  <line x1="1330" y1="260" x2="1330" y2="335" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="processingBox" x="1130" y="340" width="400" height="115" rx="10"/>
+  <text class="boxTitle" x="1330" y="373" text-anchor="middle">BWA-MEM2 2.2.1</text>
+  <text class="body" x="1330" y="400" text-anchor="middle">Build the index from the same FASTA</text>
+  <text class="body" x="1330" y="422" text-anchor="middle">Map paired reads and retain read groups</text>
+  <text class="small" x="1330" y="445" text-anchor="middle">SM, LB, PL, and PU metadata</text>
+
+  <line x1="1130" y1="397" x2="1050" y2="397" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="processingBox" x="730" y="340" width="320" height="115" rx="10"/>
+  <text class="boxTitle" x="890" y="373" text-anchor="middle">samtools 1.24</text>
+  <text class="body" x="890" y="400" text-anchor="middle">Sort and index BAM</text>
+  <text class="body" x="890" y="422" text-anchor="middle">Keep one coordinate system</text>
+  <text class="small" x="890" y="445" text-anchor="middle">Check mapping rate and coverage</text>
+
+  <line x1="730" y1="397" x2="660" y2="397" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="processingBox" x="340" y="340" width="320" height="115" rx="10"/>
+  <text class="boxTitle" x="500" y="373" text-anchor="middle">Picard 3.5.0 MarkDuplicates</text>
+  <text class="body" x="500" y="400" text-anchor="middle">Mark duplicates and retain metrics</text>
+  <text class="body" x="500" y="422" text-anchor="middle">Keep the records for auditability</text>
+  <text class="small" x="500" y="445" text-anchor="middle">Review duplication before calling</text>
+
+  <path d="M500,455 L500,525 L800,525 L800,575" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <polygon class="decision" points="800,575 960,645 800,715 640,645"/>
+  <text class="decisionText" x="800" y="633" text-anchor="middle">Which assay-specific</text>
+  <text class="decisionText" x="800" y="659" text-anchor="middle">downstream path?</text>
+
+  <path d="M800,715 L800,760 L250,760 L250,815" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M800,715 L800,760 L610,760 L610,815" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M800,715 L800,760 L970,760 L970,815" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M800,715 L800,760 L1330,760 L1330,815" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="callBox" x="80" y="820" width="340" height="115" rx="10"/>
+  <text class="boxTitle" x="250" y="853" text-anchor="middle">WGS branch</text>
+  <text class="body" x="250" y="880" text-anchor="middle">DeepVariant 1.10.0</text>
+  <text class="body" x="250" y="903" text-anchor="middle">Output VCF and gVCF</text>
+  <text class="small" x="250" y="926" text-anchor="middle">BAM and FASTA must use compatible contigs</text>
+
+  <rect class="branchBox" x="470" y="820" width="280" height="115" rx="10"/>
+  <text class="boxTitle" x="610" y="853" text-anchor="middle">RNA-seq branch</text>
+  <text class="body" x="610" y="881" text-anchor="middle">Transcript quantification</text>
+  <text class="small" x="610" y="906" text-anchor="middle">Different normalization and statistics</text>
+
+  <rect class="branchBox" x="830" y="820" width="280" height="115" rx="10"/>
+  <text class="boxTitle" x="970" y="853" text-anchor="middle">ATAC-seq branch</text>
+  <text class="body" x="970" y="881" text-anchor="middle">Peak calling and accessibility</text>
+  <text class="small" x="970" y="906" text-anchor="middle">Peaks do not identify target genes</text>
+
+  <rect class="branchBox" x="1190" y="820" width="280" height="115" rx="10"/>
+  <text class="boxTitle" x="1330" y="853" text-anchor="middle">ChIP-seq branch</text>
+  <text class="body" x="1330" y="881" text-anchor="middle">Enrichment and chromatin state</text>
+  <text class="small" x="1330" y="906" text-anchor="middle">Input or IgG controls remain required</text>
+
+  <line x1="420" y1="877" x2="470" y2="877" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="750" y1="877" x2="830" y2="877" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="1110" y1="877" x2="1190" y2="877" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <line x1="250" y1="935" x2="250" y2="990" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="callBox" x="70" y="995" width="330" height="120" rx="10"/>
+  <text class="boxTitle" x="235" y="1028" text-anchor="middle">DeepVariant 1.10.0</text>
+  <text class="body" x="235" y="1056" text-anchor="middle">Sorted and indexed BAM</text>
+  <text class="body" x="235" y="1079" text-anchor="middle">Indexed GRCh38 FASTA</text>
+  <text class="small" x="235" y="1102" text-anchor="middle">No BQSR in this workflow</text>
+
+  <line x1="400" y1="1055" x2="455" y2="1055" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <polygon class="decision" points="640,1000 820,1060 640,1120 460,1060"/>
+  <text class="decisionText" x="640" y="1048" text-anchor="middle">Does the variant pass</text>
+  <text class="decisionText" x="640" y="1074" text-anchor="middle">multi-metric review?</text>
+
+  <path d="M640,1000 L640,965 L1150,965" fill="none" stroke="#64748b" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDashed)"/>
+  <text class="edgeLabel" x="700" y="950" text-anchor="middle">Flag and inspect</text>
+  <path d="M820,1060 L900,1060" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="edgeLabel" x="860" y="1043" text-anchor="middle">Keep</text>
+
+  <rect class="annotationBox" x="905" y="995" width="360" height="130" rx="10"/>
+  <text class="boxTitle" x="1085" y="1028" text-anchor="middle">Variant review and annotation</text>
+  <text class="body" x="1085" y="1056" text-anchor="middle">Use DP, AD, GQ, MQ, allele balance,</text>
+  <text class="body" x="1085" y="1079" text-anchor="middle">strand bias, repeat context</text>
+  <text class="body" x="1085" y="1102" text-anchor="middle">Annotate with VEP 116, keep transcripts first</text>
+
+  <line x1="1265" y1="1060" x2="1375" y2="1060" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="annotationBox" x="1380" y="995" width="330" height="130" rx="10"/>
+  <text class="boxTitle" x="1545" y="1028" text-anchor="middle">Visualization</text>
+  <text class="body" x="1545" y="1056" text-anchor="middle">MultiQC for run-level metrics</text>
+  <text class="body" x="1545" y="1079" text-anchor="middle">IGV for read-level inspection</text>
+  <text class="small" x="1545" y="1102" text-anchor="middle">Inspect coverage and allele support</text>
+
+  <path d="M1545,1125 L1545,1165 L900,1165" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="resultBox" x="470" y="1170" width="860" height="110" rx="10"/>
+  <text class="boxTitle" x="900" y="1203" text-anchor="middle">Interpretation</text>
+  <text class="body" x="900" y="1231" text-anchor="middle">Technical observation -> computational inference -> biological hypothesis -> validation</text>
+  <text class="small" x="900" y="1255" text-anchor="middle">PASS and annotation support a candidate; they do not prove a causal or clinical conclusion</text>
+
+  <rect class="recordBox" x="80" y="1320" width="1640" height="120" rx="10"/>
+  <text class="boxTitle" x="110" y="1355">Reproducibility record</text>
+  <text class="body" x="110" y="1385">software versions and commands | GRCh38.p14 accession and checksum | primary contig set</text>
+  <text class="body" x="110" y="1410">VEP 116 cache | FastQC/MultiQC before and after trimming | mapping and duplicate metrics</text>
+  <text class="body" x="110" y="1435">unfiltered and filtered VCF | gVCF | annotated table | IGV screenshots for reviewed sites</text>
+
+  <rect x="80" y="1465" width="1640" height="105" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text class="boxTitle" x="105" y="1500">Legend</text>
+  <rect class="qcBox" x="210" y="1483" width="28" height="20" rx="4"/>
+  <text class="legend" x="248" y="1500">QC and trimming</text>
+  <rect class="referenceBox" x="405" y="1483" width="28" height="20" rx="4"/>
+  <text class="legend" x="443" y="1500">Reference</text>
+  <rect class="processingBox" x="570" y="1483" width="28" height="20" rx="4"/>
+  <text class="legend" x="608" y="1500">Alignment and processing</text>
+  <rect class="callBox" x="820" y="1483" width="28" height="20" rx="4"/>
+  <text class="legend" x="858" y="1500">Variant calling</text>
+  <rect class="annotationBox" x="1010" y="1483" width="28" height="20" rx="4"/>
+  <text class="legend" x="1048" y="1500">Review and annotation</text>
+  <rect class="decision" x="1240" y="1483" width="28" height="20" rx="4"/>
+  <text class="legend" x="1278" y="1500">Decision node</text>
+  <rect class="resultBox" x="1410" y="1483" width="28" height="20" rx="4"/>
+  <text class="legend" x="1448" y="1500">Interpretation</text>
+  <line x1="210" y1="1535" x2="270" y2="1535" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="legend" x="282" y="1540">Required flow</text>
+  <line x1="430" y1="1535" x2="490" y2="1535" stroke="#64748b" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDashed)"/>
+  <text class="legend" x="502" y="1540">Flag and review</text>
+</svg>

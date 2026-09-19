@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1600" viewBox="0 0 1900 1600">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowDashed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #ffffff; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #e0f2fe; }
+      .boxTitle { font: 700 18px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 15px Arial, sans-serif; fill: #334155; }
+      .small { font: 14px Arial, sans-serif; fill: #475569; }
+      .edgeLabel { font: 700 15px Arial, sans-serif; fill: #334155; }
+      .legend { font: 15px Arial, sans-serif; fill: #334155; }
+      .headerBox { fill: #1f4e79; stroke: #12395b; stroke-width: 3; }
+      .inputBox { fill: #e2e8f0; stroke: #475569; stroke-width: 2.5; }
+      .technical { fill: #dbeafe; stroke: #2563eb; stroke-width: 2.5; }
+      .frequency { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.5; }
+      .consequence { fill: #f3e8ff; stroke: #7e22ce; stroke-width: 2.5; }
+      .clinical { fill: #e0e7ff; stroke: #4f46e5; stroke-width: 2.5; }
+      .context { fill: #fef3c7; stroke: #d97706; stroke-width: 2.5; }
+      .decision { fill: #dcfce7; stroke: #16a34a; stroke-width: 2.5; }
+      .excluded { fill: #fee2e2; stroke: #dc2626; stroke-width: 2.5; }
+      .conditional { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .legendBox { fill: #ffffff; stroke: #94a3b8; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1900" height="1600" fill="#ffffff"/>
+
+  <rect class="headerBox" x="55" y="25" width="1790" height="90" rx="10"/>
+  <text class="title" x="950" y="64" text-anchor="middle">Q4 variant prioritization workflow</text>
+  <text class="subtitle" x="950" y="94" text-anchor="middle">Technical quality first, then frequency, consequence, clinical evidence, and biological context</text>
+
+  <rect class="inputBox" x="55" y="160" width="245" height="145" rx="10"/>
+  <text class="boxTitle" x="177" y="197" text-anchor="middle">Input table</text>
+  <text class="body" x="177" y="228" text-anchor="middle">12 synthetic variants</text>
+  <text class="body" x="177" y="255" text-anchor="middle">No real patient data</text>
+  <text class="small" x="177" y="285" text-anchor="middle">Placeholder VCV identifiers</text>
+
+  <line x1="300" y1="232" x2="350" y2="232" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="technical" x="355" y="160" width="245" height="145" rx="10"/>
+  <text class="boxTitle" x="477" y="197" text-anchor="middle">Technical gate</text>
+  <text class="body" x="477" y="228" text-anchor="middle">FILTER = PASS</text>
+  <text class="body" x="477" y="255" text-anchor="middle">DP &gt;= 20 and GQ &gt;= 30</text>
+  <text class="small" x="477" y="285" text-anchor="middle">Excludes MSH2 and MECP2 rows</text>
+
+  <line x1="600" y1="232" x2="650" y2="232" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="frequency" x="655" y="160" width="245" height="145" rx="10"/>
+  <text class="boxTitle" x="777" y="197" text-anchor="middle">Frequency gate</text>
+  <text class="body" x="777" y="228" text-anchor="middle">AF &lt;= 0.01</text>
+  <text class="body" x="777" y="255" text-anchor="middle">Rare-disease assumption</text>
+  <text class="small" x="777" y="285" text-anchor="middle">Excludes F5, ATM, and intronic rows</text>
+
+  <line x1="900" y1="232" x2="950" y2="232" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="consequence" x="955" y="160" width="245" height="145" rx="10"/>
+  <text class="boxTitle" x="1077" y="197" text-anchor="middle">Consequence rank</text>
+  <text class="body" x="1077" y="228" text-anchor="middle">Splice, stop, and frameshift</text>
+  <text class="body" x="1077" y="255" text-anchor="middle">then missense and synonymous</text>
+  <text class="small" x="1077" y="285" text-anchor="middle">Transcript-specific review required</text>
+
+  <line x1="1200" y1="232" x2="1250" y2="232" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="clinical" x="1255" y="160" width="245" height="145" rx="10"/>
+  <text class="boxTitle" x="1377" y="197" text-anchor="middle">Clinical evidence</text>
+  <text class="body" x="1377" y="228" text-anchor="middle">Pathogenic, VUS, conflicting,</text>
+  <text class="body" x="1377" y="255" text-anchor="middle">or benign-style labels</text>
+  <text class="small" x="1377" y="285" text-anchor="middle">Do not use labels as final truth</text>
+
+  <line x1="1500" y1="232" x2="1550" y2="232" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="context" x="1555" y="160" width="290" height="145" rx="10"/>
+  <text class="boxTitle" x="1700" y="197" text-anchor="middle">Biological context</text>
+  <text class="body" x="1700" y="228" text-anchor="middle">Gene-disease match, phenotype,</text>
+  <text class="body" x="1700" y="255" text-anchor="middle">inheritance, ancestry, and tissue</text>
+  <text class="small" x="1700" y="285" text-anchor="middle">Missing from this synthetic table</text>
+
+  <rect class="decision" x="55" y="385" width="530" height="335" rx="10"/>
+  <text class="boxTitle" x="320" y="425" text-anchor="middle">Primary candidate: TP53 splice acceptor</text>
+  <text class="body" x="90" y="466" text-anchor="start">chr17:7673803 G&gt;A</text>
+  <text class="body" x="90" y="498" text-anchor="start">PASS, DP 80, GQ 99, AF 0.00001</text>
+  <text class="body" x="90" y="530" text-anchor="start">splice_acceptor_variant, Pathogenic-style</text>
+  <text class="body" x="90" y="575" text-anchor="start">Why it is first:</text>
+  <text class="body" x="90" y="605" text-anchor="start">It clears every first-pass technical and frequency filter</text>
+  <text class="body" x="90" y="635" text-anchor="start">and has the strongest consequence in the table.</text>
+  <text class="small" x="90" y="682" text-anchor="start">Still not a clinical conclusion without real records and phenotype</text>
+
+  <line x1="585" y1="550" x2="665" y2="550" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="conditional" x="670" y="385" width="530" height="335" rx="10"/>
+  <text class="boxTitle" x="935" y="425" text-anchor="middle">Secondary candidate: BRCA2 missense</text>
+  <text class="body" x="705" y="466" text-anchor="start">chr13:32316461 C&gt;T</text>
+  <text class="body" x="705" y="498" text-anchor="start">PASS, DP 60, GQ 90, AF 0.0001</text>
+  <text class="body" x="705" y="530" text-anchor="start">missense_variant, Uncertain significance</text>
+  <text class="body" x="705" y="575" text-anchor="start">Why it stays:</text>
+  <text class="body" x="705" y="605" text-anchor="start">It passes technical and frequency screening and may gain</text>
+  <text class="body" x="705" y="635" text-anchor="start">evidence after transcript and phenotype review.</text>
+  <text class="small" x="705" y="682" text-anchor="start">Lower confidence than the TP53 splice candidate</text>
+
+  <line x1="1200" y1="550" x2="1280" y2="550" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="excluded" x="1285" y="385" width="560" height="335" rx="10"/>
+  <text class="boxTitle" x="1565" y="425" text-anchor="middle">Hard exclusions from the primary list</text>
+  <text class="body" x="1320" y="466" text-anchor="start">MSH2: Pathogenic stop gained, but LowQual, DP 8, GQ 12</text>
+  <text class="body" x="1320" y="498" text-anchor="start">MECP2: Pathogenic frameshift, but DP 5 and GQ 20</text>
+  <text class="body" x="1320" y="530" text-anchor="start">HLA-A: FILTER = FAIL and difficult MHC mapping</text>
+  <text class="body" x="1320" y="562" text-anchor="start">F5 and ATM: common population-style frequencies</text>
+  <text class="body" x="1320" y="594" text-anchor="start">Intergenic and intronic rows: no strong target hypothesis</text>
+  <text class="small" x="1320" y="646" text-anchor="start">A technically poor Pathogenic call is not a top candidate.</text>
+  <text class="small" x="1320" y="676" text-anchor="start">It needs read-level review or orthogonal testing before dismissal.</text>
+
+  <rect class="conditional" x="55" y="780" width="870" height="330" rx="10"/>
+  <text class="boxTitle" x="490" y="820" text-anchor="middle">Conditional alternatives and manual review</text>
+  <text class="body" x="90" y="862" text-anchor="start">KRAS missense with conflicting interpretations: keep as a backup, not a primary hit.</text>
+  <text class="body" x="90" y="895" text-anchor="start">CFTR synonymous and LDLR missense: technically acceptable but weaker evidence.</text>
+  <text class="body" x="90" y="928" text-anchor="start">Check the correct transcript, junction context, and RefSeq or Ensembl annotation.</text>
+  <text class="body" x="90" y="961" text-anchor="start">Inspect read support, allele balance, mapping, and coverage in IGV.</text>
+  <text class="body" x="90" y="994" text-anchor="start">Confirm whether the variant is germline or somatic and whether the phenotype fits.</text>
+  <text class="small" x="90" y="1040" text-anchor="start">This panel separates a technical lead from a biological hypothesis.</text>
+
+  <line x1="925" y1="945" x2="1005" y2="945" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="decision" x="1010" y="780" width="835" height="330" rx="10"/>
+  <text class="boxTitle" x="1427" y="820" text-anchor="middle">Required validation and a false-lead check</text>
+  <text class="body" x="1045" y="862" text-anchor="start">Orthogonal DNA confirmation for the TP53 splice-acceptor call.</text>
+  <text class="body" x="1045" y="895" text-anchor="start">RT-PCR across the affected junction, then Sanger or long-read transcript sequencing.</text>
+  <text class="body" x="1045" y="928" text-anchor="start">Minigene assay if the relevant transcript is not expressed in available RNA.</text>
+  <text class="body" x="1045" y="961" text-anchor="start">For BRCA2, review the protein domain, frequency in ancestry-matched data, and</text>
+  <text class="body" x="1045" y="994" text-anchor="start">phenotype evidence before deciding whether functional work is justified.</text>
+  <text class="small" x="1045" y="1040" text-anchor="start">False-lead outcome: perform a second method, not another database lookup.</text>
+
+  <rect class="legendBox" x="55" y="1165" width="1790" height="365" rx="10"/>
+  <text class="boxTitle" x="90" y="1205" text-anchor="start">Legend</text>
+  <rect class="technical" x="90" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="160" y="1257" text-anchor="start">Technical filter</text>
+  <rect class="frequency" x="365" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="435" y="1257" text-anchor="start">Frequency filter</text>
+  <rect class="consequence" x="640" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="710" y="1257" text-anchor="start">Consequence or clinical evidence</text>
+  <rect class="context" x="1010" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="1080" y="1257" text-anchor="start">Biological context</text>
+  <rect class="decision" x="1300" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="1370" y="1257" text-anchor="start">Candidate or validation</text>
+  <rect class="excluded" x="1580" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="1650" y="1257" text-anchor="start">Excluded first pass</text>
+
+  <text class="body" x="90" y="1325" text-anchor="start">The first pass is a ranking exercise. It does not prove that TP53 or BRCA2 causes disease, and it does not prove</text>
+  <text class="body" x="90" y="1355" text-anchor="start">that the technically poor MSH2 and MECP2 calls are false. It does show which rows deserve orthogonal testing,</text>
+  <text class="body" x="90" y="1385" text-anchor="start">read-level review, and phenotype-aware interpretation first.</text>
+  <text class="small" x="90" y="1425" text-anchor="start">All identifiers and ClinVar-style fields in the input table are synthetic teaching values.</text>
+  <text class="small" x="90" y="1470" text-anchor="start">The VCV placeholders were not queried or submitted as real clinical records.</text>
+</svg>

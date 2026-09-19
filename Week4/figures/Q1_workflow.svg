@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1680" viewBox="0 0 1600 1680">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowDashed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #ffffff; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #e0f2fe; }
+      .boxTitle { font: 700 19px Arial, sans-serif; fill: #0f172a; }
+      .measure { font: 700 15px Arial, sans-serif; fill: #1d4ed8; }
+      .body { font: 15px Arial, sans-serif; fill: #334155; }
+      .small { font: 14px Arial, sans-serif; fill: #475569; }
+      .decisionText { font: 700 18px Arial, sans-serif; fill: #713f12; }
+      .edgeLabel { font: 700 16px Arial, sans-serif; fill: #334155; }
+      .legend { font: 15px Arial, sans-serif; fill: #334155; }
+      .questionBox { fill: #1f4e79; stroke: #12395b; stroke-width: 3; }
+      .discovery { fill: #dbeafe; stroke: #2563eb; stroke-width: 2.5; }
+      .evidence { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.5; }
+      .validation { fill: #f3e8ff; stroke: #7e22ce; stroke-width: 2.5; }
+      .decision { fill: #fef9c3; stroke: #ca8a04; stroke-width: 2.5; }
+      .alternative { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .success { fill: #dcfce7; stroke: #16a34a; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1680" fill="#ffffff"/>
+
+  <rect class="questionBox" x="100" y="30" width="1400" height="110" rx="10"/>
+  <text class="title" x="800" y="74" text-anchor="middle">Biological question: what causes Gene X upregulation?</text>
+  <text class="subtitle" x="800" y="108" text-anchor="middle">Disease and matched control samples from the same relevant cell type or tissue</text>
+
+  <rect class="discovery" x="600" y="185" width="400" height="110" rx="10"/>
+  <text class="boxTitle" x="800" y="218" text-anchor="middle">RNA-seq</text>
+  <text class="measure" x="800" y="244" text-anchor="middle">measures transcript abundance</text>
+  <text class="body" x="800" y="271" text-anchor="middle">Confirm that Gene X upregulation is reproducible</text>
+
+  <line x1="800" y1="295" x2="800" y2="345" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="discovery" x="600" y="350" width="400" height="115" rx="10"/>
+  <text class="boxTitle" x="800" y="385" text-anchor="middle">ATAC-seq</text>
+  <text class="measure" x="800" y="411" text-anchor="middle">measures accessible DNA</text>
+  <text class="body" x="800" y="439" text-anchor="middle">Find a reproducible candidate region R near Gene X</text>
+
+  <line x1="800" y1="465" x2="800" y2="520" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <polygon class="decision" points="800,520 1020,600 800,680 580,600"/>
+  <text class="decisionText" x="800" y="587" text-anchor="middle">Is there a reproducible</text>
+  <text class="decisionText" x="800" y="613" text-anchor="middle">differential accessible region?</text>
+
+  <path d="M580,600 L430,600" fill="none" stroke="#64748b" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDashed)"/>
+  <text class="edgeLabel" x="505" y="585" text-anchor="middle">No</text>
+  <rect class="alternative" x="90" y="535" width="340" height="130" rx="10"/>
+  <text class="boxTitle" x="260" y="570" text-anchor="middle">Revise the model</text>
+  <text class="body" x="260" y="600" text-anchor="middle">Consider trans regulation, cell state,</text>
+  <text class="body" x="260" y="624" text-anchor="middle">promoter use, or another time point</text>
+  <text class="small" x="260" y="650" text-anchor="middle">Then return to ATAC-seq or sequence analysis</text>
+
+  <line x1="800" y1="680" x2="800" y2="750" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="edgeLabel" x="822" y="718" text-anchor="start">Yes: region R</text>
+
+  <rect class="evidence" x="55" y="755" width="280" height="150" rx="10"/>
+  <text class="boxTitle" x="195" y="788" text-anchor="middle">WGS / WES</text>
+  <text class="measure" x="195" y="815" text-anchor="middle">measures DNA sequence</text>
+  <text class="body" x="195" y="844" text-anchor="middle">Find coding, noncoding,</text>
+  <text class="body" x="195" y="867" text-anchor="middle">or structural variants</text>
+  <text class="small" x="195" y="892" text-anchor="middle">Does not show regulatory function</text>
+
+  <rect class="evidence" x="350" y="755" width="280" height="150" rx="10"/>
+  <text class="boxTitle" x="490" y="788" text-anchor="middle">H3K27ac CUT&amp;Tag</text>
+  <text class="measure" x="490" y="815" text-anchor="middle">measures active chromatin</text>
+  <text class="body" x="490" y="844" text-anchor="middle">Test whether R looks like</text>
+  <text class="body" x="490" y="867" text-anchor="middle">an active regulatory element</text>
+  <text class="small" x="490" y="892" text-anchor="middle">Does not identify the target gene</text>
+
+  <rect class="evidence" x="645" y="755" width="280" height="150" rx="10"/>
+  <text class="boxTitle" x="785" y="788" text-anchor="middle">WGBS / EM-seq</text>
+  <text class="measure" x="785" y="815" text-anchor="middle">measures CpG methylation</text>
+  <text class="body" x="785" y="844" text-anchor="middle">Compare methylation at R</text>
+  <text class="body" x="785" y="867" text-anchor="middle">between disease and control</text>
+  <text class="small" x="785" y="892" text-anchor="middle">Direction of effect remains unclear</text>
+
+  <rect class="evidence" x="940" y="755" width="280" height="150" rx="10"/>
+  <text class="boxTitle" x="1080" y="788" text-anchor="middle">Hi-C / Micro-C</text>
+  <text class="measure" x="1080" y="815" text-anchor="middle">measures contact frequency</text>
+  <text class="body" x="1080" y="844" text-anchor="middle">Test contact between R and</text>
+  <text class="body" x="1080" y="867" text-anchor="middle">the Gene X promoter</text>
+  <text class="small" x="1080" y="892" text-anchor="middle">Contact does not prove function</text>
+
+  <rect class="evidence" x="1235" y="755" width="280" height="150" rx="10"/>
+  <text class="boxTitle" x="1375" y="788" text-anchor="middle">CAGE / RAMPAGE</text>
+  <text class="measure" x="1375" y="815" text-anchor="middle">measures TSS and promoter use</text>
+  <text class="body" x="1375" y="844" text-anchor="middle">Check alternative TSSs</text>
+  <text class="body" x="1375" y="867" text-anchor="middle">or transcript usage</text>
+  <text class="small" x="1375" y="892" text-anchor="middle">Does not test enhancer function</text>
+
+  <path d="M195,905 L1375,905" fill="none" stroke="#334155" stroke-width="3"/>
+  <line x1="195" y1="905" x2="195" y2="930" stroke="#334155" stroke-width="3"/>
+  <line x1="490" y1="905" x2="490" y2="930" stroke="#334155" stroke-width="3"/>
+  <line x1="785" y1="905" x2="785" y2="930" stroke="#334155" stroke-width="3"/>
+  <line x1="1080" y1="905" x2="1080" y2="930" stroke="#334155" stroke-width="3"/>
+  <line x1="1375" y1="905" x2="1375" y2="930" stroke="#334155" stroke-width="3"/>
+  <line x1="785" y1="930" x2="785" y2="975" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <polygon class="decision" points="785,975 1010,1055 785,1135 560,1055"/>
+  <text class="decisionText" x="785" y="1037" text-anchor="middle">Does the evidence support R as a</text>
+  <text class="decisionText" x="785" y="1063" text-anchor="middle">plausible regulatory element?</text>
+
+  <path d="M1010,1055 L1180,1055" fill="none" stroke="#64748b" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDashed)"/>
+  <text class="edgeLabel" x="1095" y="1038" text-anchor="middle">No / conflicting</text>
+  <rect class="alternative" x="1185" y="995" width="330" height="120" rx="10"/>
+  <text class="boxTitle" x="1350" y="1030" text-anchor="middle">Revise or test alternatives</text>
+  <text class="body" x="1350" y="1060" text-anchor="middle">Check another element, target gene,</text>
+  <text class="body" x="1350" y="1084" text-anchor="middle">cell state, or resolution limitation</text>
+
+  <line x1="785" y1="1135" x2="785" y2="1185" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="edgeLabel" x="807" y="1165" text-anchor="start">Yes</text>
+
+  <rect class="validation" x="365" y="1190" width="360" height="150" rx="10"/>
+  <text class="boxTitle" x="545" y="1223" text-anchor="middle">MPRA</text>
+  <text class="measure" x="545" y="1250" text-anchor="middle">measures sequence-dependent activity</text>
+  <text class="body" x="545" y="1278" text-anchor="middle">Compare disease and control</text>
+  <text class="body" x="545" y="1301" text-anchor="middle">sequences or alleles at R</text>
+  <text class="small" x="545" y="1326" text-anchor="middle">Reporter context is not the endogenous locus</text>
+
+  <line x1="725" y1="1265" x2="840" y2="1265" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="validation" x="845" y="1190" width="390" height="150" rx="10"/>
+  <text class="boxTitle" x="1040" y="1223" text-anchor="middle">CRISPRi, deletion, or loop perturbation</text>
+  <text class="measure" x="1040" y="1250" text-anchor="middle">measures the effect of perturbing R</text>
+  <text class="body" x="1040" y="1278" text-anchor="middle">Use multiple guides, non-targeting and</text>
+  <text class="body" x="1040" y="1301" text-anchor="middle">inactive-region controls, and a Gene X readout</text>
+  <text class="small" x="1040" y="1326" text-anchor="middle">This is the functional validation step</text>
+
+  <line x1="1040" y1="1340" x2="800" y2="1385" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <polygon class="decision" points="800,1385 1010,1455 800,1525 590,1455"/>
+  <text class="decisionText" x="800" y="1442" text-anchor="middle">Does perturbation change</text>
+  <text class="decisionText" x="800" y="1468" text-anchor="middle">Gene X with proper controls?</text>
+
+  <path d="M590,1455 L440,1455" fill="none" stroke="#64748b" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDashed)"/>
+  <text class="edgeLabel" x="515" y="1438" text-anchor="middle">No</text>
+  <rect class="alternative" x="90" y="1400" width="350" height="110" rx="10"/>
+  <text class="boxTitle" x="265" y="1435" text-anchor="middle">Reconsider the model</text>
+  <text class="body" x="265" y="1465" text-anchor="middle">Check redundancy, cell state,</text>
+  <text class="body" x="265" y="1489" text-anchor="middle">editing efficiency, or another target</text>
+
+  <path d="M1010,1455 L1160,1455" fill="none" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="edgeLabel" x="1085" y="1438" text-anchor="middle">Yes</text>
+  <rect class="success" x="1165" y="1395" width="350" height="120" rx="10"/>
+  <text class="boxTitle" x="1340" y="1430" text-anchor="middle">Support a causal regulatory mechanism</text>
+  <text class="body" x="1340" y="1460" text-anchor="middle">The conclusion is limited to the tested</text>
+  <text class="body" x="1340" y="1484" text-anchor="middle">cell type, time point, and perturbation</text>
+
+  <rect x="60" y="1570" width="1480" height="80" rx="8" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <text class="boxTitle" x="85" y="1603">Legend</text>
+  <rect class="discovery" x="190" y="1588" width="28" height="20" rx="4"/>
+  <text class="legend" x="228" y="1605">Expression or discovery assay</text>
+  <rect class="evidence" x="440" y="1588" width="28" height="20" rx="4"/>
+  <text class="legend" x="478" y="1605">Mechanism-specific evidence</text>
+  <rect class="validation" x="700" y="1588" width="28" height="20" rx="4"/>
+  <text class="legend" x="738" y="1605">Functional validation</text>
+  <rect class="decision" x="925" y="1588" width="28" height="20" rx="4"/>
+  <text class="legend" x="963" y="1605">Decision node</text>
+  <rect class="alternative" x="1120" y="1588" width="28" height="20" rx="4"/>
+  <text class="legend" x="1158" y="1605">Revise or test alternatives</text>
+  <rect class="success" x="1370" y="1588" width="28" height="20" rx="4"/>
+  <text class="legend" x="1408" y="1605">Causal support</text>
+  <line x1="190" y1="1632" x2="250" y2="1632" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+  <text class="legend" x="262" y="1637">Order</text>
+  <line x1="360" y1="1632" x2="420" y2="1632" stroke="#64748b" stroke-width="3" stroke-dasharray="8 7" marker-end="url(#arrowDashed)"/>
+  <text class="legend" x="432" y="1637">Alternative branch</text>
+</svg>

@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="1500" viewBox="0 0 1900 1500">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#334155"/>
+    </marker>
+    <marker id="arrowDashed" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748b"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #ffffff; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #e0f2fe; }
+      .boxTitle { font: 700 18px Arial, sans-serif; fill: #0f172a; }
+      .body { font: 15px Arial, sans-serif; fill: #334155; }
+      .small { font: 14px Arial, sans-serif; fill: #475569; }
+      .edgeLabel { font: 700 15px Arial, sans-serif; fill: #334155; }
+      .legend { font: 15px Arial, sans-serif; fill: #334155; }
+      .headerBox { fill: #1f4e79; stroke: #12395b; stroke-width: 3; }
+      .observation { fill: #dbeafe; stroke: #2563eb; stroke-width: 2.5; }
+      .chromatin { fill: #fff7ed; stroke: #ea580c; stroke-width: 2.5; }
+      .contact { fill: #f3e8ff; stroke: #7e22ce; stroke-width: 2.5; }
+      .expression { fill: #dcfce7; stroke: #16a34a; stroke-width: 2.5; }
+      .perturb { fill: #fef3c7; stroke: #d97706; stroke-width: 2.5; }
+      .interpretation { fill: #f1f5f9; stroke: #64748b; stroke-width: 2.5; }
+      .alternative { fill: #fee2e2; stroke: #dc2626; stroke-width: 2.5; }
+      .decision { fill: #e0e7ff; stroke: #4f46e5; stroke-width: 2.5; }
+      .legendBox { fill: #ffffff; stroke: #94a3b8; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="1900" height="1500" fill="#ffffff"/>
+
+  <rect class="headerBox" x="55" y="25" width="1790" height="90" rx="10"/>
+  <text class="title" x="950" y="64" text-anchor="middle">Q3 integrated locus model: candidate region U upstream of Gene Y</text>
+  <text class="subtitle" x="950" y="94" text-anchor="middle">Evidence chain from observation to perturbation, with the main competing model kept visible</text>
+
+  <rect class="observation" x="45" y="155" width="250" height="165" rx="10"/>
+  <text class="boxTitle" x="170" y="190" text-anchor="middle">Accessibility</text>
+  <text class="body" x="170" y="220" text-anchor="middle">ATAC-seq</text>
+  <text class="body" x="170" y="248" text-anchor="middle">U has a reproducible</text>
+  <text class="body" x="170" y="272" text-anchor="middle">accessible peak</text>
+  <text class="small" x="170" y="302" text-anchor="middle">Does not identify enhancer or target</text>
+
+  <line x1="295" y1="237" x2="345" y2="237" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="chromatin" x="350" y="155" width="250" height="165" rx="10"/>
+  <text class="boxTitle" x="475" y="190" text-anchor="middle">Chromatin state</text>
+  <text class="body" x="475" y="220" text-anchor="middle">H3K27ac</text>
+  <text class="body" x="475" y="248" text-anchor="middle">Local mark overlaps</text>
+  <text class="body" x="475" y="272" text-anchor="middle">the accessible peak</text>
+  <text class="small" x="475" y="302" text-anchor="middle">Active state is not target-gene proof</text>
+
+  <line x1="600" y1="237" x2="650" y2="237" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="chromatin" x="655" y="155" width="250" height="165" rx="10"/>
+  <text class="boxTitle" x="780" y="190" text-anchor="middle">Methylation</text>
+  <text class="body" x="780" y="220" text-anchor="middle">WGBS or EM-seq</text>
+  <text class="body" x="780" y="248" text-anchor="middle">Low CpG methylation</text>
+  <text class="body" x="780" y="272" text-anchor="middle">at U</text>
+  <text class="small" x="780" y="302" text-anchor="middle">Compatible with activity, not causal</text>
+
+  <line x1="905" y1="237" x2="955" y2="237" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="contact" x="960" y="155" width="250" height="165" rx="10"/>
+  <text class="boxTitle" x="1085" y="190" text-anchor="middle">3D contact</text>
+  <text class="body" x="1085" y="220" text-anchor="middle">Hi-C or Micro-C</text>
+  <text class="body" x="1085" y="248" text-anchor="middle">U contacts the Gene Y</text>
+  <text class="body" x="1085" y="272" text-anchor="middle">promoter</text>
+  <text class="small" x="1085" y="302" text-anchor="middle">Contact is not regulatory function</text>
+
+  <line x1="1210" y1="237" x2="1260" y2="237" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="expression" x="1265" y="155" width="250" height="165" rx="10"/>
+  <text class="boxTitle" x="1390" y="190" text-anchor="middle">Expression</text>
+  <text class="body" x="1390" y="220" text-anchor="middle">RNA-seq</text>
+  <text class="body" x="1390" y="248" text-anchor="middle">Gene Y is expressed</text>
+  <text class="body" x="1390" y="272" text-anchor="middle">in this condition</text>
+  <text class="small" x="1390" y="302" text-anchor="middle">Expression does not prove U causes it</text>
+
+  <line x1="1515" y1="237" x2="1565" y2="237" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="perturb" x="1570" y="155" width="285" height="165" rx="10"/>
+  <text class="boxTitle" x="1712" y="190" text-anchor="middle">Perturbation</text>
+  <text class="body" x="1712" y="220" text-anchor="middle">CRISPRi at U</text>
+  <text class="body" x="1712" y="248" text-anchor="middle">Measure Gene Y directly</text>
+  <text class="body" x="1712" y="272" text-anchor="middle">with multiple guides</text>
+  <text class="small" x="1712" y="302" text-anchor="middle">This is the causal test</text>
+
+  <rect class="interpretation" x="45" y="390" width="560" height="285" rx="10"/>
+  <text class="boxTitle" x="325" y="427" text-anchor="middle">Interpretation supported by the combined pattern</text>
+  <text class="body" x="75" y="466" text-anchor="start">U has an active enhancer-like chromatin state.</text>
+  <text class="body" x="75" y="498" text-anchor="start">The accessible, H3K27ac-marked region overlaps a</text>
+  <text class="body" x="75" y="522" text-anchor="start">promoter contact and Gene Y is expressed.</text>
+  <text class="body" x="75" y="566" text-anchor="start">This makes U a plausible candidate, but the pattern</text>
+  <text class="body" x="75" y="590" text-anchor="start">cannot show that U is required for Gene Y.</text>
+  <text class="small" x="75" y="638" text-anchor="start">Current label: active enhancer-like candidate for Gene Y</text>
+
+  <rect class="interpretation" x="655" y="390" width="560" height="285" rx="10"/>
+  <text class="boxTitle" x="935" y="427" text-anchor="middle">Missing evidence</text>
+  <text class="body" x="685" y="466" text-anchor="start">Target-gene assignment from a functional assay</text>
+  <text class="body" x="685" y="498" text-anchor="start">Cell-type resolution for the contact</text>
+  <text class="body" x="685" y="530" text-anchor="start">Allele-specific or guide-specific effects</text>
+  <text class="body" x="685" y="562" text-anchor="start">A matched inactive-region control</text>
+  <text class="body" x="685" y="594" text-anchor="start">Tests of nearby alternative target genes</text>
+  <text class="small" x="685" y="638" text-anchor="start">These gaps keep the model at the hypothesis level</text>
+
+  <rect class="alternative" x="1265" y="390" width="590" height="285" rx="10"/>
+  <text class="boxTitle" x="1560" y="427" text-anchor="middle">Strongest alternative explanation</text>
+  <text class="body" x="1295" y="466" text-anchor="start">U contacts and regulates another nearby gene.</text>
+  <text class="body" x="1295" y="498" text-anchor="start">Gene Y is controlled by a different enhancer,</text>
+  <text class="body" x="1295" y="522" text-anchor="start">a trans-acting change, or altered RNA stability.</text>
+  <text class="body" x="1295" y="566" text-anchor="start">The contact may be structural or come from a</text>
+  <text class="body" x="1295" y="590" text-anchor="start">mixture of cell types in the bulk sample.</text>
+  <text class="small" x="1295" y="638" text-anchor="start">This model predicts a different perturbation result</text>
+
+  <rect class="decision" x="45" y="735" width="1810" height="390" rx="10"/>
+  <text class="boxTitle" x="950" y="775" text-anchor="middle">Functional test: CRISPRi at U followed by direct expression and contact readouts</text>
+
+  <rect class="perturb" x="105" y="820" width="430" height="190" rx="10"/>
+  <text class="boxTitle" x="320" y="856" text-anchor="middle">Perturb U</text>
+  <text class="body" x="320" y="891" text-anchor="middle">Several guides against U</text>
+  <text class="body" x="320" y="918" text-anchor="middle">Non-targeting and inactive-region controls</text>
+  <text class="body" x="320" y="945" text-anchor="middle">Confirm knockdown and cell viability</text>
+  <text class="small" x="320" y="981" text-anchor="middle">Avoid calling a toxic effect a regulatory effect</text>
+
+  <line x1="535" y1="915" x2="610" y2="915" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="expression" x="615" y="820" width="460" height="190" rx="10"/>
+  <text class="boxTitle" x="845" y="856" text-anchor="middle">Measure Gene Y and nearby genes</text>
+  <text class="body" x="845" y="891" text-anchor="middle">RT-qPCR or RNA-seq after perturbation</text>
+  <text class="body" x="845" y="918" text-anchor="middle">Check the promoter contact if possible</text>
+  <text class="body" x="845" y="945" text-anchor="middle">Repeat in the relevant cell type</text>
+  <text class="small" x="845" y="981" text-anchor="middle">A direct Gene Y readout is required</text>
+
+  <line x1="1075" y1="915" x2="1150" y2="915" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect class="decision" x="1155" y="805" width="650" height="220" rx="10"/>
+  <text class="boxTitle" x="1480" y="842" text-anchor="middle">Decision rule</text>
+  <text class="body" x="1190" y="882" text-anchor="start">Gene Y falls after perturbation: support U as a causal regulator.</text>
+  <text class="body" x="1190" y="915" text-anchor="start">Another gene changes but Gene Y does not: favor the alternative model.</text>
+  <text class="body" x="1190" y="948" text-anchor="start">No change anywhere: check targeting, redundancy, cell state, and sensitivity.</text>
+  <text class="small" x="1190" y="992" text-anchor="start">A negative result is not proof that regulation is absent.</text>
+
+  <rect class="legendBox" x="45" y="1170" width="1810" height="275" rx="10"/>
+  <text class="boxTitle" x="75" y="1208" text-anchor="start">Legend</text>
+  <rect class="observation" x="75" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="145" y="1257" text-anchor="start">Direct observation</text>
+  <rect class="interpretation" x="320" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="390" y="1257" text-anchor="start">Interpretation or missing evidence</text>
+  <rect class="alternative" x="675" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="745" y="1257" text-anchor="start">Competing model</text>
+  <rect class="perturb" x="940" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="1010" y="1257" text-anchor="start">Endogenous perturbation</text>
+  <rect class="decision" x="1240" y="1235" width="55" height="30" rx="5"/>
+  <text class="legend" x="1310" y="1257" text-anchor="start">Decision or functional test</text>
+
+  <text class="body" x="75" y="1325" text-anchor="start">The solid arrows show the evidence chain requested in the question. The perturbation panel is the only part of the figure</text>
+  <text class="body" x="75" y="1352" text-anchor="start">that tests causality. The alternative branch stays in the model because chromatin state, methylation, contact, and expression</text>
+  <text class="body" x="75" y="1379" text-anchor="start">can all support a plausible enhancer without proving that the target gene is Gene Y.</text>
+  <text class="small" x="75" y="1418" text-anchor="start">Figure prepared for Week 4 Q3. The evidence pattern is qualitative because the student package does not include a Q3 data table.</text>
+</svg>
