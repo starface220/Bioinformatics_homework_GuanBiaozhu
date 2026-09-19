@@ -1,0 +1,4 @@
+CHROM	POS	REF	ALT	FILTER	DP	GQ	AF	GENE	CONSEQUENCE	CLINVAR_SIG	CLINVAR_ID	NOTE	PRIORITY_SCORE	MANUAL_REVIEW
+chr17	7673803	G	A	PASS	80	99	1e-05	TP53	splice_acceptor_variant	Pathogenic	VCV000012345	Annotated near a canonical splice junction	13	Check reference build, MANE transcript, genotype quality in BAM, phenotype fit, inheritance, segregation, and orthogonal validation.
+chr13	32316461	C	T	PASS	60	90	1e-04	BRCA2	missense_variant	Uncertain_significance	VCV000067890	Rare missense with uncertain clinical significance	9	Check reference build, MANE transcript, genotype quality in BAM, phenotype fit, inheritance, segregation, and orthogonal validation.
+chr12	25398284	C	A	PASS	58	91	0.00015	KRAS	missense_variant	Conflicting_interpretations_of_pathogenicity	VCV000000888	ClinVar conflicting interpretations	7	Check reference build, MANE transcript, genotype quality in BAM, phenotype fit, inheritance, segregation, and orthogonal validation.
