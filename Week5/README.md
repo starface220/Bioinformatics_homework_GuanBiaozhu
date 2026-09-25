@@ -42,8 +42,8 @@ session_info.txt
 目录：`Homework2/`
 
 Homework 2 使用本地 EasyMultiProfiler Web 完成了内置 RNA-seq 测试数据的
-完整分析。原始输入文件已复制到 `Homework2/inputs/`。分析结果未上传至外部
-EMP 服务。
+完整分析。原始输入文件已复制到 `Homework2/inputs/`。GitHub 同步记录已并入
+`Homework2/EMP/`。
 
 分析摘要：
 
@@ -68,6 +68,7 @@ KEGG_RETRY_NOTE.md
 inputs/
 EasyMultiProfiler_RNAseq_results/
 EasyMultiProfiler_RNAseq_bundle_complete_20260925-100834.zip
+EMP/
 ```
 
 原始 EasyMultiProfiler 会话仍保存在本地应用数据目录：
@@ -78,6 +79,32 @@ C:\EasyMultiProfiler-Web-main\.local_run\data\sessions\Z6uHJSVEoZc7W4O5ZtxdcMNI
 
 下载 bundle 中的第一份 `summary.txt` 记录了一次临时 KEGG 连接失败。之后定向
 重试成功，其 CSV 和 PNG 保存在 `EasyMultiProfiler_RNAseq_results/` 下。
+
+### EMP 同步记录
+
+目录：`Homework2/EMP/`
+
+该目录保存 EasyMultiProfiler 生成的正式同步记录：
+
+```text
+EMP/
+├── README.md
+├── profile.json
+├── _ledger/
+└── Week_05/
+    └── transcriptomics/
+        └── weekly/
+            ├── LATEST
+            └── runs/
+                └── <timestamp>/
+                    ├── manifest.json
+                    ├── data/
+                    ├── results/
+                    └── teaching/
+```
+
+`manifest.json` 记录课程方向、周次、实验名、同步时间和 Git 路径。`runs/` 保留
+每次同步，不会覆盖已有记录；`_ledger/` 保存对应的同步审计信息。
 
 ## 输入文件
 
