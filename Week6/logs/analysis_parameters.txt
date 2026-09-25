@@ -1,0 +1,7 @@
+EasyMultiProfiler Web version: 9.0.4
+Analysis timestamp: 2026-09-25 18:46:07 CST
+Random seed: 2026
+Group comparisons: Group (4 levels), Disease (IBS vs UC), Phase (before vs after)
+Alpha models: Kruskal-Wallis; paired before/after: Wilcoxon signed-rank
+Beta model: Bray-Curtis; PERMANOVA 999 permutations; PERMDISP 999 permutations
+Taxa tests: Kruskal-Wallis, Mann-Whitney, and paired Wilcoxon; BH correction

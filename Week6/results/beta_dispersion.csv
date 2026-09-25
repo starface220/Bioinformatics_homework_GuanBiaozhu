@@ -1,0 +1,4 @@
+"f_statistic","p_value","permutations","variable","levels"
+0.611423604591409,0.606,999,"Group","IBS_after | IBS_before | UC_after | UC_before"
+0.71637874401258,0.4,999,"Disease","IBS | UC"
+1.00480181798461,0.298,999,"Phase","after | before"

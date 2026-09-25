@@ -1,0 +1,319 @@
+{
+  "assignment": "Week 6 EMP 16S homework",
+  "created": "2026-09-25T19:01:02+08:00",
+  "emp_version": "9.0.4",
+  "experiment": "microbiome_16s_week6",
+  "emp_session_id": "MYLQuB4Wvb429RvLHXEIuOvq",
+  "input_samples": 132,
+  "input_features": 470,
+  "samples_with_group": 130,
+  "primary_hypothesis": "UC affects a small number of gut taxa while overall Shannon diversity stays similar.",
+  "teaching_journal_saved": true,
+  "files": [
+    {
+      "path": "科学假设.md",
+      "bytes": 2361,
+      "sha256": "506d4edd63ad66ca5558cd20aa43a103898b5ba604cbc7f01ee6a27ab69da4c5"
+    },
+    {
+      "path": "data/16S_level-7.csv",
+      "bytes": 181882,
+      "sha256": "bd8a7f81efb6fb9d4c903f22b8fb10a0d94e0647d50d6be55780d19089ae3977"
+    },
+    {
+      "path": "data/16S_mapping.csv",
+      "bytes": 5566,
+      "sha256": "3983f3edddea76f728a92808b9a0c2f6de64511c37c46322949af32a6979b00c"
+    },
+    {
+      "path": "data/emp_genus_top40_counts.csv",
+      "bytes": 17114,
+      "sha256": "3b0a12f914862035346a76dc8326a43e9e6d45842fbce8f1d34bd8b847215d31"
+    },
+    {
+      "path": "data/emp_genus_top40_rclr.csv",
+      "bytes": 102571,
+      "sha256": "627327b24004076d3e3ec45df27c8a28972f853f364d50c47d5e397adecbbed4"
+    },
+    {
+      "path": "data/emp_metadata.csv",
+      "bytes": 10249,
+      "sha256": "7e2d8dc39faa54b598678d382057a57614533e3f105a5a17e65b79b297cd621f"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_ace_boxplot.pdf",
+      "bytes": 9248,
+      "sha256": "a72b9dd583796ae3d4059392385d22fd230afabf6afc388d080e91bfffc2c4ab"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_ace_boxplot.png",
+      "bytes": 113922,
+      "sha256": "d1257ed63667287ce8cdbfccd335629887ecae2b69ad7969a3ebd3e94bd6fc04"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_chao1_boxplot.pdf",
+      "bytes": 13958,
+      "sha256": "b071c1b2d864e8109021633b76aa9b55e586f8a3cab84b31a6b99b4698096892"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_chao1_boxplot.png",
+      "bytes": 168221,
+      "sha256": "5fec5a77c521f0c857baa8ccb1fa09359dca6c6ad60f77b95df5b2e238330ae3"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_invsimpson_boxplot.pdf",
+      "bytes": 13934,
+      "sha256": "86282cd394ae8a753c8aafe0ac251322bbcd8238e5f5596e41372379ec348b6b"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_invsimpson_boxplot.png",
+      "bytes": 171897,
+      "sha256": "1bbb52854abf46cd6a6ba9178d5de39e4481c8fd848db860b638359895658b60"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_observed_boxplot.pdf",
+      "bytes": 14005,
+      "sha256": "29bd42b3d0f7410c197b6dfec7cd0c06dc9a8b18f4b930fa3dba58cab5306252"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_observed_boxplot.png",
+      "bytes": 175764,
+      "sha256": "f4d4dee90b7cd3f2a9dc748df1ab26d411721b77f5196f7185e07c15ef165152"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_pielou_boxplot.pdf",
+      "bytes": 14054,
+      "sha256": "923653836c67e8df68ccaa171769bde2e4f4f486230f1dcdc7b93f3f20816eda"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_pielou_boxplot.png",
+      "bytes": 173971,
+      "sha256": "5b76353ffcb8ef301ada8255b28b6ff385c1b1523de4d70b3ed56167564c37ff"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_shannon_boxplot.pdf",
+      "bytes": 13989,
+      "sha256": "7b36b72d8c4be76146fc1820522b27d22669cde18202b0cf66ed0689364a9aa0"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_shannon_boxplot.png",
+      "bytes": 175231,
+      "sha256": "29b57ff5e4e1f86c508fdc438ef2cc1ee24f5285dfa1f94e6341ce5a0b735c05"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_simpson_boxplot.pdf",
+      "bytes": 13957,
+      "sha256": "81af7e1271aab8d6ba5ac1f079631b85a43601bc6db9214795237c63d3336285"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/02_alpha_simpson_boxplot.png",
+      "bytes": 171317,
+      "sha256": "7b9ae924dd457359ee3c97426ac6b20592591905065ab4d0458991ee9ffcd99d"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/03_beta_nmds_scatter.pdf",
+      "bytes": 24396,
+      "sha256": "1cac4a832cabdd70f707580853951f2635d4afd0e02b8037db1d4c9cb4a34cc1"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/03_beta_nmds_scatter.png",
+      "bytes": 510894,
+      "sha256": "b5db727da094e48651b601285f46134123fe36fafa91a590293bac51b5ec9534"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/03_beta_pca_scatter.pdf",
+      "bytes": 24409,
+      "sha256": "ab3510b63259e67d30338f96ade38cd8e6e5d133e11d28bf7c24b0ac0dbaca10"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/03_beta_pca_scatter.png",
+      "bytes": 416317,
+      "sha256": "aa08872dd2ccc16951d3a5151839a459e8a3135123b8bb975bb8b5bb5bb13de7"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/03_beta_pcoa_scatter.pdf",
+      "bytes": 24472,
+      "sha256": "bce9639fc3901d5007a17673c64d154dcc0acc2a484b7d64c60309d724aab683"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/03_beta_pcoa_scatter.png",
+      "bytes": 495508,
+      "sha256": "402fc6c13c19b979bf0b28792665ac8e8a8ab902eefcdfa645d85e18885cae65"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/04_top15_barplot.pdf",
+      "bytes": 23058,
+      "sha256": "bcee215cd2ab63d476e8de4813e8ac6bb3a99c8b71cd50d0c3feff731fe196d6"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/04_top15_barplot.png",
+      "bytes": 562054,
+      "sha256": "154cf0e646312c0420e53501b32f38b26dd31d34026c421900553a161fd72689"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/04_top40_heatmap.pdf",
+      "bytes": 38521,
+      "sha256": "118c50197891cf4b8102abf1675ef82b4053ae6259dc33158202b577fe6af4bc"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/plots/04_top40_heatmap.png",
+      "bytes": 731198,
+      "sha256": "e6dda92dc178575e30d22324a7a6f71e6cc5d3e776d2c0e69cd1d464a665ae8a"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/summary.txt",
+      "bytes": 655,
+      "sha256": "d6248d3bb0ece625ce99b49bfef479205f5d252303ca66ae55774f25496faf74"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/tables/02_alpha_indices.csv",
+      "bytes": 13375,
+      "sha256": "5490b25196ca9ee1f308adf14e48c37b1971cd6cc2814263c5c92a3fc9b8831d"
+    },
+    {
+      "path": "emp_bundle/20260925-183907/tables/03_beta_coords.csv",
+      "bytes": 29373,
+      "sha256": "98ec756dbbf64e2de85bc98df32fdacfed093ff41a2a0fda286ffbc0156fc21b"
+    },
+    {
+      "path": "emp_bundle/EMP_Week6_16S_runall_20260925-183907.zip",
+      "bytes": 3817375,
+      "sha256": "14816dff4522b25585201c66057c3c7bf1edd3e390b53b4b98a8e22bca4971c6"
+    },
+    {
+      "path": "EMP_Teaching_Report.md",
+      "bytes": 2231,
+      "sha256": "6fa4faceadf7f4c537bc9c37c2a7e51d8d79783c63d32b7f8415e38bdbbba803"
+    },
+    {
+      "path": "figures/alpha_shannon_group.pdf",
+      "bytes": 13033,
+      "sha256": "a1a9944d36e8a1f9ff576b50c1ad1e348f1e51ecd5c3084e0cbb901433d559ce"
+    },
+    {
+      "path": "figures/alpha_shannon_group.png",
+      "bytes": 152484,
+      "sha256": "7f84b150ff868732ba23be2ab83bd7ae51dbe809235183270f0b8168a3c7673e"
+    },
+    {
+      "path": "figures/beta_pcoa_group.pdf",
+      "bytes": 15140,
+      "sha256": "e8256392193974d4a6efef327d6cf3478aa1626220a1d06feb0899aae1ec9fb8"
+    },
+    {
+      "path": "figures/beta_pcoa_group.png",
+      "bytes": 349026,
+      "sha256": "5ed3723930850e6ea0c2864c33b0d4793458d8c99db8ada58daa2f01e8282744"
+    },
+    {
+      "path": "figures/paired_taxon_shift.pdf",
+      "bytes": 5376,
+      "sha256": "d2d7d2325c40128bf2a17a0eeb785e85ef9c581c83764f51ef6e5d510529939f"
+    },
+    {
+      "path": "figures/paired_taxon_shift.png",
+      "bytes": 99340,
+      "sha256": "40832c3008c2b5f66cc485182c450cf180d8f855c5c979ab0b70fe84659d5452"
+    },
+    {
+      "path": "figures/top_taxa_composition.pdf",
+      "bytes": 5348,
+      "sha256": "c79d9b34561267dcbbae691791bf590f3febe40f684ad14ed5422b678eadc40b"
+    },
+    {
+      "path": "figures/top_taxa_composition.png",
+      "bytes": 101796,
+      "sha256": "5b8a7af941b435cd19c88d698a54d65986739f89a96fc4e662fcae29274a76b3"
+    },
+    {
+      "path": "GITHUB_SYNC_GUIDE.md",
+      "bytes": 1406,
+      "sha256": "ed711ea342a39980c8bc08c8e038a124b697206295a4f5aa8f03883eb72d0e49"
+    },
+    {
+      "path": "logs/analysis_parameters.txt",
+      "bytes": 416,
+      "sha256": "7c7f59efe12bd6ac5347da5e8e9e08aaed96e9a7876532ee60bfc3232db57ea1"
+    },
+    {
+      "path": "logs/R_session_info.txt",
+      "bytes": 1166,
+      "sha256": "427a7b4673a3641e2eb3128a0bb37f22c5d729da84deaeb823fa2c975b1dfdac"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1834,
+      "sha256": "e364abb03208a18e263e5be86ab00c60f9026b40abb00b3b525da1dd06b357af"
+    },
+    {
+      "path": "results/alpha_group_summary.csv",
+      "bytes": 2685,
+      "sha256": "40f503e1f6e29e281b775c986db6a36b22e1ac6f130b5dc26a1b70a295eca58c"
+    },
+    {
+      "path": "results/alpha_group_tests.csv",
+      "bytes": 1604,
+      "sha256": "0af79e20fe7ab97811c969cab77dbc20085b33be0221ac29a1ebb5c1e023140f"
+    },
+    {
+      "path": "results/alpha_metrics.csv",
+      "bytes": 21428,
+      "sha256": "ac8780c9c1839b0b2293f1b5301a5ebed9f0761bc34653d4ea0bcf06225bfc6d"
+    },
+    {
+      "path": "results/alpha_paired_before_after.csv",
+      "bytes": 1286,
+      "sha256": "220b31545546a83d7aada57c401d0d46342a63c8b520d238bf35bccb03d58af0"
+    },
+    {
+      "path": "results/alpha_pairwise_wilcoxon.csv",
+      "bytes": 991,
+      "sha256": "0ece45aeb771dfbcac8b3f23b808ec73bb07ed8430521b7b6dd5b9cc3d4daa94"
+    },
+    {
+      "path": "results/beta_dispersion.csv",
+      "bytes": 245,
+      "sha256": "669b8665afcc704f57c24497df87d51311e04b9b59a880c682d806319af18807"
+    },
+    {
+      "path": "results/beta_pcoa_coordinates.csv",
+      "bytes": 13283,
+      "sha256": "ed6c3275c8986e6f94c2efc33ba5517cb137dc057e7d1bc2974ff5ead5e41a44"
+    },
+    {
+      "path": "results/beta_permanova.csv",
+      "bytes": 678,
+      "sha256": "6f66463ffe067c8a65b11c0ad091adc01673eac1c493a54a3ded3f1f452efb27"
+    },
+    {
+      "path": "results/data_validation.csv",
+      "bytes": 256,
+      "sha256": "8251ff1dc3f52ef986bdb100e01ba0bad9c2359010d91430e0bf212ae19df896"
+    },
+    {
+      "path": "results/differential_taxa_selected.csv",
+      "bytes": 37551,
+      "sha256": "27d9bcf2c294326b23742ef2f162527ee1cd878319e9f876aac1aa8d169126b8"
+    },
+    {
+      "path": "results/differential_taxa.csv",
+      "bytes": 47205,
+      "sha256": "b923cb096a6cef3e84cc301c297b7f6cabeb9d210ff5bb270849a8fd495f25d0"
+    },
+    {
+      "path": "SCIENTIFIC_HYPOTHESIS.md",
+      "bytes": 2550,
+      "sha256": "e2a2941fd1a9e6c195453a17261db7e671ea912343204159ae35c61a20bbeeae"
+    },
+    {
+      "path": "scripts/week6_emp_analysis.R",
+      "bytes": 22846,
+      "sha256": "82f481f4236dffd04a413da6e4e3d8fbe3a823185f741df62fb46654a2ff781a"
+    },
+    {
+      "path": "SUBMISSION_ANSWER.md",
+      "bytes": 3932,
+      "sha256": "be4b100a716ebad767b07d2f3f27872761a789b08c66442fee0a9aefd444be8b"
+    }
+  ]
+}

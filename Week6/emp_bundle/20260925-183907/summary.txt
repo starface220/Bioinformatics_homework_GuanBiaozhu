@@ -1,0 +1,13 @@
+EasyMultiProfiler 16S one-click run
+Experiment: microbiome_16s_week6_runall
+Started:    2026-09-25 18:39:07
+
+[18:39:08] Taxonomy prep                                1.17s  ok
+[18:39:19] Alpha                                       10.93s  ok | indices=shannon,simpson,invsimpson,chao1,ace,observed,pielou
+[18:39:25] Beta                                         5.80s  ok | methods=PCoA,PCA,NMDS
+[18:39:27] Heatmap + barplot                            2.37s  ok
+[18:39:27] Diff taxa                                    0.31s  ok
+[18:39:27] Metadata snapshot                            0.03s  ok
+
+Total elapsed: 21.1s
+Bundle: 20260925-183907.zip

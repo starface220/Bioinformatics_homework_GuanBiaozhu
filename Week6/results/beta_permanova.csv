@@ -1,0 +1,6 @@
+"term","df","sum_sq","r2","f_statistic","p_value","permutations","variable","levels","disease"
+"Group",3,0.551166509125462,0.0334396434427228,1.4530546541313,0.095,999,"Group","IBS_after | IBS_before | UC_after | UC_before",NA
+"Disease",1,0.35646433889125,0.0216269315990968,2.82943933566051,0.018,999,"Disease","IBS | UC",NA
+"Phase",1,0.0962471040959159,0.00583937664947896,0.751830432203484,0.627,999,"Phase","after | before",NA
+"Phase",1,0.10831787676177,0.0129244558985541,0.890370556087199,0.226,999,"Phase within disease","before | after","IBS"
+"Phase",1,0.0775834868719265,0.0104242518155173,0.589907445427956,0.578,999,"Phase within disease","before | after","UC"
