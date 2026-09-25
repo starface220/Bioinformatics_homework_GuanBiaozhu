@@ -1,0 +1,12 @@
+EasyMultiProfiler RNAseq one-click run
+Experiment: week5_rnaseq_homework
+Started:    2026-09-25 10:08:34
+
+[10:08:42] PCA + scatter                                8.19s  ok
+[10:09:12] DESeq2 diff                                 29.79s  ok | n=16757
+[10:09:15] Volcano                                      2.41s  ok
+[10:09:16] DEG heatmap                                  1.20s  ok | n_genes=200
+[10:09:17] Top-var heatmap                              1.03s  ok
+[10:09:18] Sample correlation                           0.97s  ok
+[10:10:18] KEGG enrichment                             60.58s  ok | err: enrichKEGG() failed for organism 'mmu': cannot read from connection. If this is a network error retry, or switch to GO.
+[10:11:04] GO enrichment                               46.11s  ok | n=40

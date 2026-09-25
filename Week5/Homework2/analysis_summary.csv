@@ -1,0 +1,24 @@
+metric,value
+platform,EasyMultiProfiler Web v9.0.4
+experiment,week5_rnaseq_homework
+run_id,20260925-100834
+input_samples,24
+input_groups,6
+input_features,19150
+primary_comparison,T4400 vs DMSO
+differential_method,DESeq2
+padj_threshold,0.05
+log2fc_threshold,1
+differential_features_tested,16757
+significant_genes,238
+up_in_T4400,172
+down_in_T4400,66
+pca_pc1_variance_percent,66.6569
+pca_pc2_variance_percent,25.7542
+sample_correlation_min,0.978558072292409
+sample_correlation_median,0.993205792592966
+go_terms,40
+kegg_terms,26
+kegg_status,completed_after_targeted_retry
+github_upload,not_performed
+external_emp_upload,not_performed
