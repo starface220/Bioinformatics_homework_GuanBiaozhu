@@ -1,29 +1,27 @@
-# Week 5 Homework
+# Week 5 作业
 
-This directory contains the two Week 5 homework submissions.
+本目录包含 Week 5 的两份作业提交。
 
 ## Homework 1
 
-Folder: `Homework1/`
+目录：`Homework1/`
 
-Homework 1 is a bulk RNA-seq differential-expression analysis completed in R
-with DESeq2 and `apeglm`. The script reads the original count matrix and sample
-metadata from `../for_student/` and writes all required submission files into
-this folder.
+Homework 1 是使用 R、DESeq2 和 `apeglm` 完成的 bulk RNA-seq 差异表达分析。
+脚本从 `../for_student/` 读取原始计数矩阵和样本元数据，并将所有要求文件写入
+当前目录。
 
-Analysis summary:
+分析摘要：
 
-- 12 samples in a balanced design with three batches and two conditions
-- 1,000 input genes
-- Model design: `~ batch + condition`
-- Filter: at least 10 counts in at least 3 samples
-- 989 genes retained for the DESeq2 model
-- Differential-expression thresholds: `padj < 0.05` and
-  `abs(shrunken log2FoldChange) >= 1`
-- 60 significant genes: 36 higher and 24 lower in treated samples
-- PCA: PC1 explains 24% of the variance and separates treated from control
+- 12 个样本，两个条件、三个批次，设计均衡
+- 输入 1,000 个基因
+- 模型设计：`~ batch + condition`
+- 过滤条件：至少 3 个样本中的计数不少于 10
+- DESeq2 模型保留 989 个基因
+- 差异表达阈值：`padj < 0.05` 且 `abs(shrunken log2FoldChange) >= 1`
+- 60 个显著基因：treated 中 36 个升高、24 个降低
+- PCA：PC1 解释 24% 的方差，并将 treated 与 control 分开
 
-Required files:
+要求的文件：
 
 ```text
 week5_deseq2_analysis.R
@@ -36,31 +34,31 @@ week5_deseq2_object.rds
 session_info.txt
 ```
 
-To rerun Homework 1, open `week5_deseq2_analysis.R` in RStudio and click
-`Source`.
+如需重新运行 Homework 1，请在 RStudio 中打开
+`week5_deseq2_analysis.R`，然后点击 `Source`。
 
 ## Homework 2
 
-Folder: `Homework2/`
+目录：`Homework2/`
 
-Homework 2 is a complete local EasyMultiProfiler Web analysis of the bundled
-RNA-seq test data. The original input files are copied into `Homework2/inputs/`.
-No results were sent to GitHub or an external EMP service.
+Homework 2 使用本地 EasyMultiProfiler Web 完成了内置 RNA-seq 测试数据的
+完整分析。原始输入文件已复制到 `Homework2/inputs/`。分析结果未上传至外部
+EMP 服务。
 
-Analysis summary:
+分析摘要：
 
-- 24 samples and 19,150 genes
-- Six groups with four samples per group
-- Primary comparison: `T4400 vs DMSO`
-- Method: DESeq2
-- Thresholds: `padj < 0.05` and `abs(log2FoldChange) >= 1`
-- 16,757 genes tested
-- 238 significant genes: 172 higher and 66 lower in T4400
-- PCA: PC1 explains 66.7% and PC2 explains 25.8%
-- GO enrichment: 40 terms
-- KEGG enrichment: 26 pathways after a successful targeted retry
+- 24 个样本、19,150 个基因
+- 6 个分组，每组 4 个样本
+- 主要比较：`T4400 vs DMSO`
+- 方法：DESeq2
+- 阈值：`padj < 0.05` 且 `abs(log2FoldChange) >= 1`
+- 参与差异分析：16,757 个基因
+- 238 个显著基因：T4400 中 172 个升高、66 个降低
+- PCA：PC1 解释 66.7% 的方差，PC2 解释 25.8%
+- GO 富集：40 条结果
+- KEGG 富集：定向重试成功后得到 26 条通路
 
-Important local files:
+主要本地文件：
 
 ```text
 README.md
@@ -72,20 +70,18 @@ EasyMultiProfiler_RNAseq_results/
 EasyMultiProfiler_RNAseq_bundle_complete_20260925-100834.zip
 ```
 
-The original EasyMultiProfiler session remains in the local application data
-directory:
+原始 EasyMultiProfiler 会话仍保存在本地应用数据目录：
 
 ```text
 C:\EasyMultiProfiler-Web-main\.local_run\data\sessions\Z6uHJSVEoZc7W4O5ZtxdcMNI
 ```
 
-The first `summary.txt` inside the downloaded bundle records a temporary KEGG
-connection failure. A targeted KEGG retry later succeeded; its CSV and PNG are
-saved under `EasyMultiProfiler_RNAseq_results/`.
+下载 bundle 中的第一份 `summary.txt` 记录了一次临时 KEGG 连接失败。之后定向
+重试成功，其 CSV 和 PNG 保存在 `EasyMultiProfiler_RNAseq_results/` 下。
 
-## Input files
+## 输入文件
 
-The unchanged course input files remain in `for_student/`:
+未修改的课程输入文件仍保存在 `for_student/`：
 
 ```text
 Week5_Homework_Count_Matrix.csv
@@ -94,5 +90,4 @@ Week5_Homework_Starter.R
 Week5_Homework_Gene_Annotation_Instructor_Key.csv
 ```
 
-The instructor truth-value file was not used to fit models, select genes, or
-write either interpretation.
+教师 true-value 文件未用于模型拟合、基因筛选或撰写任何解释。
